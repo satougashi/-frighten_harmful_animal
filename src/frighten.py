@@ -9,7 +9,7 @@ import random
 def play_music(music_file_path, play_time):
     pygame.mixer.init()
     pygame.mixer.music.load(music_file_path)
-    pygame.mixer.music.play(-1) # 繰り返し
+    pygame.mixer.music.play(-1) # repeat
 
     time.sleep(play_time)
     pygame.mixer.music.stop()
