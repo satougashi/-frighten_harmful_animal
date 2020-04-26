@@ -16,7 +16,8 @@ def play_music(music_file_path, play_time):
     pygame.mixer.music.stop()
 
 # random.seed(0)
-app_path = Path(os.path.abspath(os.getcwd())).parent
+app_path = Path(os.path.abspath(__file__)).parents[1]
+print(app_path)
 sount_path = Path(str(app_path) + "/sound/")
 sounds = list(sount_path.glob("*.mp3"))
 
