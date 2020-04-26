@@ -5,6 +5,7 @@ import pygame.mixer
 import time
 from pathlib import Path
 import random
+import os
 
 def play_music(music_file_path, play_time):
     pygame.mixer.init()
@@ -15,8 +16,8 @@ def play_music(music_file_path, play_time):
     pygame.mixer.music.stop()
 
 # random.seed(0)
-p = Path("../sound/")
+app_path = Path(os.path.abspath(os.getcwd())).parent
+sount_path = Path(str(app_path) + "/sound/")
+sounds = list(sount_path.glob("*.mp3"))
 
-sounds = list(p.glob("*.mp3"))
-print(sounds)
 play_music(random.choice(sounds).as_posix(), 5)
