@@ -47,7 +47,7 @@ try:
         
         if (counter > (60 * 15)):
             t = datetime.datetime.now().strftime("%H:%M")
-            if (("00:00" <= t and t <= "05:00") or ("19:00" <= t and t <= "24:59")):
+            if (("00:00" <= t and t <= "05:00") or ("19:00" <= t and t <= "24:00")):
                 print(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') + " timeout")
                 for i in range(3):
                     play_music(get_sound_path())
